@@ -1,0 +1,9 @@
+The main purpose of scripts in this folder ("time analysis") is to operate on the time included in pings and detections.
+
+The time from pings will allow us to determine
+how often devices connect to the database,
+what delays in sending or counting the detection work occur
+
+Time from detection will allow us to see
+how often detections are detected,
+and how long they are sent to the base.

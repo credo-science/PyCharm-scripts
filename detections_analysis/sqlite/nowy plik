@@ -1,0 +1,6 @@
+SELECT  datetime(TIMESTAMP/1000,'unixepoch') AS czas, 
+COUNT(datetime(TIMESTAMP/1000,'unixepoch')) AS nplet,
+GROUP_CONCAT( DISTINCT device_id  ) AS device_id
+FROM detections
+GROUP BY datetime(TIMESTAMP/1000,'unixepoch')
+HAVING nplet > 2 AND COUNT(DISTINCT device_id) > 2
